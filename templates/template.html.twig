@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <header class="jumbotron jumbotron-fluid bg-dark text-white mb-0">
+        <section class="container">
+            <h1 class="display-4">Forum Ada Lovelace</h1>
+            <p class="lead">Parlez de tout et n'importe quoi</p>
+        </section>
+    </header>
+    <ul class="nav bg-danger mt-0">
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{{ path("index") }}">Accueil</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{{ path("rules") }}">Règles</a>
+        </li>
+    </ul>
+    <main  class="container my-5">
+    {% block main %} {% endblock %}
+    </main>
+    <footer class="jumbotron jumbotron-fluid bg-dark text-white">
+        <section class="container">
+            <p class="lead">Tous droits réservé</p>
+        </section>
+    </footer>
+{% endblock %}
